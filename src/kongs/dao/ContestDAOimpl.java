@@ -30,7 +30,8 @@ public class ContestDAOimpl implements ContestDAO {
 			ps = con.prepareStatement("select * from contest");
 			rs =ps.executeQuery();
 			while(rs.next()) {
-				//list.add(new Contest(rs.getInt(1), title, sponser, category, startDate, endDate, clickCount, regDate, photoName))
+				list.add(new Contest(rs.getInt(1), 
+						title, sponser, category, startDate, endDate, clickCount, regDate, photoName))
 			}
 			
 		} finally {
