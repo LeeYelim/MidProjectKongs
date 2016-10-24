@@ -24,15 +24,16 @@ public class KongsController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//parameter로 넘어오는 command 값 받기
+		System.out.println("====");
 		String key = request.getParameter("command");//encType있을경우 null
-		if(key==null) key="list";
-		
+		if(key==null) key="main";
 		Action action = map.get(key);
 		action.execute(request, response);
 	}
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("====");
 		doPost(request, response);
 	}
 }
