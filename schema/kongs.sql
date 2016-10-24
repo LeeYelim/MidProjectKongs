@@ -50,3 +50,21 @@ select * from board;
 select * from teamboard;
 
 commit;
+
+CREATE SEQUENCE seq_freeBoard
+start with 1
+increment by 1
+
+CREATE SEQUENCE seq_findBoard
+start with 1
+increment by 1
+
+CREATE SEQUENCE seq_noticeBoard
+start with 1
+increment by 1
+
+CREATE SEQUENCE seq_fileBoard
+start with 1
+increment by 1
+
+commit

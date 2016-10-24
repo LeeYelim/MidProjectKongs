@@ -2,7 +2,7 @@ package kongs.model.dto;
 
 public class Board {
 	private int boardNum; // 게시판 번호
-	private String category; // 게시판 종류
+	private String category; // 게시판 종류 ex) 게시판 : free/find, 팀 게시판 : notice, task, file
 	private String title; // 글 제목
 	private String contents; // 글 내용
 	private String writer; // 글쓴이

@@ -83,21 +83,24 @@ public class TeamBoardImpl implements TeamBoardDAO {
 		Connection con = null;
 		PreparedStatement ps = null;
 		int result = 0;
-		String sql = "insert into TeamBoard value(?,?,?,?,?,?,?,?,?)";
+		String sql="";
+		
+		if(teamBoard.getCategory().equals("notice")) {
+			sql = "insert into TeamBoard values(?, seq_noticeBoard.nextval, ?, ?, ?, ?, sysdate, 0, ?)";
+		} else if(teamBoard.getCategory().equals("task")) {
+			sql = "insert into Board values(?, seq_fileBoard.nextval, ?, ?, ?, ?, sysdate, 0, ?)";
+		} 
 		
 		try{
 			con = DBUtil.getConnection();
 			ps = con.prepareStatement(sql);
 			ps.setString(1, teamBoard.getTeamId());
-			ps.setInt(2, teamBoard.getBoardNum());
-			ps.setString(3, teamBoard.getCategory());
-			ps.setString(4, teamBoard.getTitle());
-			ps.setString(5, teamBoard.getContents());
-			ps.setString(6, teamBoard.getWriter());
-			ps.setString(7, teamBoard.getRegDate());
-			ps.setInt(8, teamBoard.getClickCount());
-			ps.setString(9, teamBoard.getFileName());
-			
+			ps.setString(2, teamBoard.getCategory());
+			ps.setString(3, teamBoard.getTitle());
+			ps.setString(4, teamBoard.getContents());
+			ps.setString(5, teamBoard.getWriter());
+			ps.setString(6, teamBoard.getFileName());
+
 			result = ps.executeUpdate();
 			
 		}finally {

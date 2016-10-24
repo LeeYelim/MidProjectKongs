@@ -102,16 +102,20 @@ public class BoardDAOImpl implements BoardDAO {
 		Connection con = null;
 		PreparedStatement ps = null;
 		int result = 0;
-		
+		String sql="";
 		try{
 			con = DBUtil.getConnection();
-			ps = con.prepareStatement("insert into Board values(?, sysdate, ?, 0, ?, ?, ?, ?)");
+			if(board.getCategory().equals("free")) {
+				sql = "insert into Board values(?, sysdate, ?, 0, ?, ?, seq_freeBoard.nextval, ?)";
+			} else if(board.getCategory().equals("find")) {
+				sql = "insert into Board values(?, sysdate, ?, 0, ?, ?, seq_findBoard.nextval, ?)";
+			}
+			ps = con.prepareStatement(sql);
 			ps.setString(1, board.getWriter());
 			ps.setString(2, board.getTitle());
 			ps.setString(3, board.getContents());
 			ps.setString(4, board.getFileName());
-			ps.setInt(5, board.getBoardNum());
-			ps.setString(6, board.getCategory());
+			ps.setString(5, board.getCategory());
 			result = ps.executeUpdate();
 		} finally {
 			DBUtil.dbClose(con, ps, null);
