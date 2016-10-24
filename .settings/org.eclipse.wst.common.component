@@ -2,6 +2,7 @@
     <wb-module deploy-name="MidProjectKongs">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/schema"/>
         <property name="context-root" value="MidProjectKongs"/>
         <property name="java-output-path" value="/MidProjectKongs/build/classes"/>
     </wb-module>
