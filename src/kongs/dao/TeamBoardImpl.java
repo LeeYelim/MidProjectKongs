@@ -155,5 +155,4 @@ public class TeamBoardImpl implements TeamBoardDAO {
 		return result;
 	}
 
-
 }
