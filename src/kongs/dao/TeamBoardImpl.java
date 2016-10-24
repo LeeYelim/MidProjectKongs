@@ -13,19 +13,47 @@ import kongs.util.DBUtil;
 public class TeamBoardImpl implements TeamBoardDAO {
 
 	/**
-	 * 전체 레코드 검색
+	 * 팀의 존재 여부 확인
 	 */
 	@Override
-	public List<TeamBoard> selectAll() throws SQLException {
+	public int searchTeam(String id) throws SQLException {
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		List<TeamBoard> list = new ArrayList<>();
-		String sql = "select * from TeamBoard";
+		int result = 0;
+		String sql = "select teamid from team where id = ?";
 		
 		try{
 			con = DBUtil.getConnection();
 			ps = con.prepareStatement(sql);
+			ps.setString(1, id);
+			rs = ps.executeQuery();
+			if(rs.next()){
+				result = 1;
+			}else{
+				result = 0;
+			}
+		}finally{
+			DBUtil.dbClose(con, ps, rs);
+		}
+		return result;
+	}
+	
+	/**
+	 * 전체 레코드 검색
+	 */
+	@Override
+	public List<TeamBoard> selectAll(String teamId) throws SQLException {
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		List<TeamBoard> list = new ArrayList<>();
+		String sql = "select * from TeamBoard where teamId=?";
+		
+		try{
+			con = DBUtil.getConnection();
+			ps = con.prepareStatement(sql);
+			ps.setString(1, teamId);
 			rs = ps.executeQuery();
 			
 			while(rs.next()){
@@ -82,16 +110,17 @@ public class TeamBoardImpl implements TeamBoardDAO {
 	 * 해당 레코드 삭제
 	 */
 	@Override
-	public int delete(String boardNum) throws SQLException {
+	public int delete(String boardNum,String teamId) throws SQLException {
 		Connection con = null;
 		PreparedStatement ps = null;
 		int result = 0;
-		String sql = "delete from TeamBoard where boardNum = ?";
+		String sql = "delete from TeamBoard where boardNum = ? and teamId=?";
 		
 		try{
 			con = DBUtil.getConnection();
 			ps = con.prepareStatement(sql);
 			ps.setString(1, boardNum);
+			ps.setString(2, teamId);
 			result = ps.executeUpdate();
 			
 		}finally {
@@ -108,7 +137,7 @@ public class TeamBoardImpl implements TeamBoardDAO {
 		Connection con = null;
 		PreparedStatement ps = null;
 		int result = 0;
-		String sql = "update TeamBoard set writer =?, title=?, contents=?, fileName=?";
+		String sql = "update TeamBoard set writer =?, title=?, contents=?, fileName=? where teamId=?";
 		
 		try{
 			con = DBUtil.getConnection();
@@ -117,6 +146,7 @@ public class TeamBoardImpl implements TeamBoardDAO {
 			ps.setString(2, teamBoard.getTitle());
 			ps.setString(3, teamBoard.getContents());
 			ps.setString(4, teamBoard.getFileName());
+			ps.setString(5, teamBoard.getTeamId());
 			result = ps.executeUpdate();
 			
 		}finally {
@@ -124,5 +154,6 @@ public class TeamBoardImpl implements TeamBoardDAO {
 		}
 		return result;
 	}
+
 
 }
