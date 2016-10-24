@@ -58,7 +58,7 @@ public class ContestDAOimpl implements ContestDAO {
 	
 			con = DBUtil.getConnection();
 			ps = con.prepareStatement("insert into contest(title,sponser,startday,endday,photoname,clickcount,category,regdate,contestnum) "
-					+ "values(?,?,?,?,?,?,?,sysdate,?)");
+					+ "values(?,?,?,?,?,?,?,sysdate,seq_contestBoard.nextval)");
 			ps.setString(1, contest.getTitle());
 			ps.setString(2, contest.getSponser());
 			ps.setString(3, contest.getStartDate());
@@ -66,7 +66,6 @@ public class ContestDAOimpl implements ContestDAO {
 			ps.setString(5, contest.getPhotoName());
 			ps.setInt(6, contest.getClickCount());
 			ps.setString(7, contest.getCategory());
-			//TODO 시퀀스넘버넣어주기
 			result = ps.executeUpdate();
 	
 		} finally {
