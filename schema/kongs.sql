@@ -30,7 +30,7 @@ ftitle varchar2(20),
 contents varchar2(20),
 clickcount number,
 filename varchar2(20),
-borardnum varchar2(20),
+boardnum varchar2(20),
 category varchar2(20));
 
 create table teamboard(
