@@ -21,8 +21,7 @@ public class MainLoadAction implements Action {
 		 List<Contest> list = ContestService.selectAll();
 		 int size = list.size();
 		 request.setAttribute("size", size);
-		 url="/index.jsp";
-		 
+		 url="/main.jsp";
 		 System.out.println(size);
 		}catch(SQLException e){
 			e.printStackTrace();
