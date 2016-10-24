@@ -87,7 +87,7 @@ public class TeamBoardImpl implements TeamBoardDAO {
 		
 		if(teamBoard.getCategory().equals("notice")) {
 			sql = "insert into TeamBoard values(?, seq_noticeBoard.nextval, ?, ?, ?, ?, sysdate, 0, ?)";
-		} else if(teamBoard.getCategory().equals("task")) {
+		} else if(teamBoard.getCategory().equals("file")) {
 			sql = "insert into Board values(?, seq_fileBoard.nextval, ?, ?, ?, ?, sysdate, 0, ?)";
 		} 
 		
