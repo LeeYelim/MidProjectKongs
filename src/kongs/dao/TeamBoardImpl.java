@@ -140,7 +140,7 @@ public class TeamBoardImpl implements TeamBoardDAO {
 		Connection con = null;
 		PreparedStatement ps = null;
 		int result = 0;
-		String sql = "update TeamBoard set writer =?, title=?, contents=?, fileName=? where teamId=?";
+		String sql = "update TeamBoard set writer=?, title=?, contents=?, fileName=? where teamId=?";
 		
 		try{
 			con = DBUtil.getConnection();
