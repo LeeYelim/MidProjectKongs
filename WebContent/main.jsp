@@ -6,9 +6,9 @@
 <head>
 	<title>콩스</title>
 	<script>
-		$(function(){
+	function(){
 			window.location.href="front";
-		})
+		}
 	</script>
 	
 	<link rel="stylesheet" type="text/css" href="css/indexCss.css">
