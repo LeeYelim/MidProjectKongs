@@ -1,3 +1,4 @@
+
 select * from member;
 insert into member values('kwon','123','±ÇÇª¸§','Çª¸§','kongs');
 insert into member values('kim','111','±è¸íÈ¯','¸íÈ¯','kongs');
@@ -39,12 +40,13 @@ start with 1
 increment by 1;
 
 select * from teamboard;
-
+delete from teamboard where clickcount=0;
 
 insert into teamboard values('kongs','notice-writer','notice-title','notice-contents',0,'notice-filename',seq_noticeBoard.nextval,'notice-category');
 insert into teamboard values('kongs','file-writer','file-title','file-contents',0,'file-filename',seq_fileBoard.nextval,'file-category');
+insert into teamboard values('kongs','notice-writer2','notice-title2','notice-contents2',0,'notice-filename2',seq_noticeBoard.nextval,'notice-category');
+insert into teamboard values('kongs','file-writer2','file-title2','file-contents2',0,'file-filename2',seq_fileBoard.nextval,'file-category');
 
-delete from teamboard where clickcount=0;
 
 drop sequence seq_noticeBoard;
 drop sequence seq_fileBoard;
@@ -54,5 +56,9 @@ start with 1
 increment by 1;
 
 CREATE SEQUENCE seq_fileBoard
+start with 1
+increment by 1;
+
+CREATE SEQUENCE seq_contestBoard
 start with 1
 increment by 1;

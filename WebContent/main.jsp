@@ -1,11 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD:WebContent/index.html
 	<meta charset="UTF-8">
 
 	<title>::콩스</title>
+=======
+	<title>콩스</title>
+	<script>
+		$(function(){
+			window.location.href="front";
+		})
+	</script>
+	
+>>>>>>> origin/master:WebContent/main.jsp
 	<link rel="stylesheet" type="text/css" href="css/indexCss.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
 </head>
 <body>
 	<div id="mainMenu">
@@ -70,7 +84,7 @@
 		<div class="stati_bg">
 			<div>
 				<span>현재 생성된 공모전수</span><br>
-				<span>300개</span>
+				<span>${size}</span>
 			</div>
 			<img src="img/stati1.jpg" alt="공모전수">
 		</div>
@@ -234,7 +248,7 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="smoothscroll-for-websites-master/SmoothScroll.js"></script>
+	<script type="text/javascript" src="js/smoothscroll-for-websites-master/SmoothScroll.js"></script>
 	<script type="text/javascript" src="js/mainBanner.js"></script>
 	<script type="text/javascript" src="js/mainStati.js"></script>
 	<script type="text/javascript" src="js/teamBanner.js"></script>

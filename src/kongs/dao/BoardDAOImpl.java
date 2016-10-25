@@ -63,7 +63,7 @@ public class BoardDAOImpl implements BoardDAO {
 		List<Board> list = new ArrayList<>();
 		try{
 			con = DBUtil.getConnection();
-			ps = con.prepareStatement("select top(6) from board order by clickcount desc");
+			ps = con.prepareStatement("select top(4) from board order by clickcount desc");
 			rs = ps.executeQuery();
 			while(rs.next()) {
 				list.add(new Board(rs.getInt("boardNum"), rs.getString("category"), 
