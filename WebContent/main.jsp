@@ -16,7 +16,7 @@
 	<div id="mainMenu">
 		<div class="container">
 			<div id="logo">
-				<a href="#"><img src="img/logo.png"></a>
+				<a href="index.jsp"><img src="img/logo.png"></a>
 			</div>
 			<ul id="menu">				
 				<li><a href="#">공모전 정보</a></li>

@@ -1,0 +1,35 @@
+.vacuum {
+	width: 100%;
+	height: 93px;
+}
+
+#category .category {
+	text-align: right;
+	margin: 40px auto;
+	position: relative;
+	width: 50%;
+	float: left;
+}
+
+#category .list{
+	position:relative;
+	text-align: left;
+	width: 50%;
+	float: left;
+}
+
+#content{
+	position:relative;
+	width: 100%;
+	height: 30px;
+}
+#content .title ul{
+	transform: translateX(34%);
+}
+
+#content .title ul li{
+	float:left;
+	width:15%;
+	line-height:30px;
+	padding: 0 10px;
+}
