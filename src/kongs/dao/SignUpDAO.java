@@ -16,7 +16,7 @@ public interface SignUpDAO {
 	/**
 	 *  È¸¿øÅ»Åð
 	 */
-	int deleteMember(Member member) throws SQLException;
+	int deleteMember(String id) throws SQLException;
 	
 	
 	/**

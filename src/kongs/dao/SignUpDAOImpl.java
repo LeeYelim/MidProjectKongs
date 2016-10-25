@@ -41,7 +41,7 @@ public class SignUpDAOImpl implements SignUpDAO {
 	 *  È¸¿ø Å»Åð
 	 */
 	@Override
-	public int deleteMember(Member member) throws SQLException {
+	public int deleteMember(String id) throws SQLException {
 		Connection con = null;
 		PreparedStatement ps = null;
 		int result = 0;
@@ -49,7 +49,7 @@ public class SignUpDAOImpl implements SignUpDAO {
 		try {
 			con = DBUtil.getConnection();
 			ps = con.prepareStatement("delete from member where id=?");
-			ps.setString(1, member.getId());
+			ps.setString(1, id);
 			result = ps.executeUpdate();
 		} finally {
 			DBUtil.dbClose(con, ps, null);

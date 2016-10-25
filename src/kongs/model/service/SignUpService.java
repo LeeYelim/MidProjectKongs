@@ -33,10 +33,28 @@ public class SignUpService {
 		return signupDao.selectAllMember();
 	}
 	
+	
 	/**
 	 * 회원조회(ID중복확인)
 	 */
 	public static Member selectById(String id) throws SQLException {
 		return signupDao.SelectById(id);
 	}
+	
+	
+	/**
+	 * 회원탈퇴
+	 */
+	public static int withdrawal(String id) throws SQLException {
+		return signupDao.deleteMember(id);
+	}
+	
+	/**
+	 * 회원정보수정
+	 */
+	public static int updateMember(Member member) throws SQLException {
+		return signupDao.updateMember(member);
+	}
+	
+	
 }
