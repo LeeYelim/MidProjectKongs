@@ -35,6 +35,10 @@
 						<li class="profile_nick">HwaYak 님 로그인</li>
 					</ul>
 				</div>
+				<div id="profile_btn">
+						<button>팀 만들기</button>
+						<button>개인정보 수정</button>
+				</div>
 			</div>
 		</div>
 	</div>

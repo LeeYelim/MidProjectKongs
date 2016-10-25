@@ -185,6 +185,11 @@ h3.main_title span {
 	white-space: nowrap;
 }
 
+#profile_btn{
+	position: relative;
+	bottom: 0px;
+}
+
 /*
 	MainImgBanner
  */
