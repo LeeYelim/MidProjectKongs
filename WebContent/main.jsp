@@ -5,11 +5,6 @@
 <html lang="en">
 <head>
 	<title>콩스</title>
-	<script>
-	function(){
-			window.location.href="front";
-		}
-	</script>
 	
 	<link rel="stylesheet" type="text/css" href="css/indexCss.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
