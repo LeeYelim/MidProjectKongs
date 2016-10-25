@@ -26,18 +26,21 @@
 					<a>Login</a>
 				</li>
 			</ul>
-			<div id="trangle-up"></div>
-			<div id="profileView">
-				<div id="profileImage">
-					<img alt="유저 프로필 사진" src="img/main/team_profile1.jpg">
-					<ul>
-						<li class="profile_id">jhlee1201ashdsajkhasjksahdjk</li>
-						<li class="profile_nick">HwaYak 님 로그인</li>
-					</ul>
-				</div>
-				<div id="profile_btn">
-						<button>팀 만들기</button>
-						<button>개인정보 수정</button>
+			<div id="profile">
+				<div id="trangle-up"></div>
+				<div id="profileView">
+					<div id="profileImage">
+						<img alt="유저 프로필 사진" src="img/main/team_profile1.jpg">
+						<ul>
+							<li class="profile_id">jhlee1201ashdsajkhasjksahdjk</li>
+							<li class="profile_nick">HwaYak 님 로그인</li>
+						</ul>
+					</div>
+					<div id="profile_btn">
+						<a href="">팀 만들기</a>
+						<a href="">팀 게시판 이동</a>
+						<a href="">개인정보 수정</a>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -148,10 +148,16 @@ h3.main_title span {
 	bottom: 0%;
 }
 
+#profile {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
 #profileView {
 	position: relative;
 	width: 40%;
-	height: 300%;
+	height: 260%;
 	background-color: #f0f0f0;
 	float: right;
 	box-shadow: inset 0 0 10px -3px black;
@@ -180,14 +186,38 @@ h3.main_title span {
 	line-height: 60px;
 	font-size: 23px;
 	font-weight: bold;
-	text-overflow:ellipsis;
+	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
 }
 
-#profile_btn{
-	position: relative;
-	bottom: 0px;
+#profile_btn {
+	position: absolute;
+	width: 100%;
+	bottom: 0%;
+	text-align: center;
+}
+
+#profile_btn a {
+	width: 34%;
+	float: left;
+	line-height: 40px;
+	font-size: 15px;
+	color: #fff;
+	background: #0091af;
+	transition: background 300ms;
+}
+
+#profile_btn a:first-child {
+	width: 33%;
+}
+
+#profile_btn a:last-child {
+	width: 33%;
+}
+
+#profile_btn a:hover {
+	background: #0a617c;
 }
 
 /*
