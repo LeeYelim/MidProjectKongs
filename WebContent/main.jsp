@@ -47,7 +47,7 @@
 						<a href="#">팀 관련 페이지 보기</a>
 					</div>
 				</div>	
-			</li>
+			</li>  
 			<li>
 				<img src="img/banner3.jpg" alt="">
 				<div class="container">
