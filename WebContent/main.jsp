@@ -73,14 +73,14 @@
 		<div class="stati_bg">
 			<div>
 				<span>현재 생성된 공모전수</span><br>
-				<span>300개</span>
+				<span>${size}</span>
 			</div>
 			<img src="img/stati1.jpg" alt="공모전수">
 		</div>
 		<div class="stati_bg">
 			<div>
 				<span>현재 구성된 팀수</span><br>
-				<span>50000팀</span>
+				<span>${teamcount}</span>
 			</div>
 			<img src="img/stati2.jpg" alt="팀수">
 		</div>
@@ -101,37 +101,19 @@
 					<span>Competition</span>
 				</a>
 			</h3>
+			
 			<!-- 공모전-->
 			<div class="photo-view">
-				<div class="photo-image">
-					<div class="photo-img">
-						<a href="#"></a>
-						<img src="img/photo1.jpg">
+				<c:forEach items="${list}" var="contest">
+					<div class="photo-image">
+						<div class="photo-img">
+							<a href="#"></a>
+							<img src="img/${contest.photoName}.jpg">
+						</div>
+					<h4>${contest.title}</h4>
 					</div>
-					<h4>공모전 제목1</h4>
-				</div>
-				<div class="photo-image">
-					<div class="photo-img">
-						<a href="#"></a>
-						<img src="img/photo2.jpg">
-					</div>
-					<h4>공모전 제목2</h4>
-				</div>
-				<div class="photo-image">
-					<div class="photo-img">
-						<a href="#"></a>
-						<img src="img/photo3.jpg">
-					</div>
-					<h4>공모전 제목3</h4>
-				</div>
-				<div class="photo-image">
-					<div class="photo-img">
-						<a href=""></a>
-						<img src="img/photo4.jpg">
-					</div>
-					<p><h4>공모전 제목4</h4></p>
-					<p><span></span></p>
-				</div>
+				</c:forEach>
+				<p><span></span></p>
 			</div>
 		</div>
 	</div>

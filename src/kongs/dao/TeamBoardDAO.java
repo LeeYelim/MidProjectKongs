@@ -8,6 +8,12 @@ import kongs.model.dto.TeamBoard;
 public interface TeamBoardDAO {
 	
 	/**
+	 * 팀 수 구하기
+	 * select distinct count(teamid) from member;
+	 * */
+	int searchTeamCount() throws SQLException;
+	
+	/**
 	 * 팀의 존재 여부 확인
 	 */
 	int searchTeam(String id) throws SQLException;

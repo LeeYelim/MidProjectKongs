@@ -42,12 +42,37 @@ public class ContestDAOimpl implements ContestDAO {
 
 	
 	/**
+	 * Contest에 있는 레코드 중 조회수가 높은 4개만 추출
+	 * */
+	@Override
+	public List<Contest> selectTopClickCount() throws SQLException {
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		List<Contest> list = new ArrayList<>();
+		
+		try {
+			con = DBUtil.getConnection();
+			ps = con.prepareStatement("select * from contest where rownum<=4 order by clickcount");
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				list.add(new Contest(rs.getInt("contestnum"), rs.getString("title"), 
+						rs.getString("sponser"), rs.getString("category"), rs.getString("startDay"), 
+						rs.getString("endDay"), rs.getInt("clickCount"), rs.getString("regDate"), 
+						rs.getString("photoName")));
+			}
+		} finally {
+			DBUtil.dbClose(con, ps, rs);
+		}
+		return list;
+	}
+	
+	/**
 	 * Contest에 레코드 삽입
 	 * 공모전 정보 등록
 	 */
 	@Override
 	public int insert(Contest contest) throws SQLException {
-		
 		Connection con = null;
 		PreparedStatement ps = null;
 		int result = 0;
@@ -127,10 +152,6 @@ public class ContestDAOimpl implements ContestDAO {
 		
 		return result;
 	}
-
-	
-	
-	
 }
 
 

@@ -12,6 +12,10 @@ public interface ContestDAO {
 	 */
 	List<Contest> selectAll() throws SQLException;
 	
+	/**
+	 * Contest에 있는 레코드 중 조회수 높은 4개 추출
+	 * */
+	List<Contest> selectTopClickCount() throws SQLException;
 	
 	/**
 	 * Contest에 레코드 삽입

@@ -16,6 +16,14 @@ public class ContestService {
 		return contestDao.selectAll();
 	}
 	
+	/**
+	 * Contest에 있는 레코드 중 조회수 높은 4개 추출
+	 * */
+	public static List<Contest> selectTopClickCount() throws SQLException {
+		return contestDao.selectTopClickCount();
+	}
+	
+	
 	
 	/**
 	 * Contest에 레코드 삽입

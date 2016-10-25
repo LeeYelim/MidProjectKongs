@@ -62,3 +62,6 @@ increment by 1;
 CREATE SEQUENCE seq_contestBoard
 start with 1
 increment by 1;
+
+update contest set photoname='photo1' where contestnum=1;
+update contest set photoname='photo2' where contestnum=2;

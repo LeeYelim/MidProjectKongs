@@ -13,6 +13,30 @@ import kongs.util.DBUtil;
 public class TeamBoardImpl implements TeamBoardDAO {
 
 	/**
+	 * 팀 수 구하기
+	 * */
+	@Override
+	public int searchTeamCount() throws SQLException {
+		Connection con = null;
+		PreparedStatement ps = null;
+		String sql = "select count(distinct(teamid)) from member";
+		ResultSet rs = null;
+		int count = 0;
+		
+		try {
+			con = DBUtil.getConnection();
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				count = rs.getInt(1);
+			}
+		} finally {
+			DBUtil.dbClose(con, ps, rs);
+		}
+		return count;
+	}
+	
+	/**
 	 * 팀의 존재 여부 확인
 	 */
 	@Override
@@ -157,5 +181,4 @@ public class TeamBoardImpl implements TeamBoardDAO {
 		}
 		return result;
 	}
-
 }
