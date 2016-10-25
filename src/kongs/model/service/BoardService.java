@@ -20,42 +20,42 @@ public class BoardService {
 	 * 분야별 조회
 	 * */
 	public static List<Board> searchByCategory(String category) throws SQLException {
-		return null;
+		return boardDao.searchByCategory(category);
 	}
 	
 	/**
 	 * 조회수 상위6개 조회하기
 	 * */
 	public static List<Board> searchTopClickCount() throws SQLException {
-		return null;
+		return boardDao.searchTopClickCount();
 	}
 	
 	/**
 	 * 상세 게시글 조회(목록에서 클릭시 나오는 데이터)
 	 * */
 	public static Board searchBoard(int boardNum) throws SQLException {
-		return null;
+		return boardDao.searchBoard(boardNum);
 	}
 	
 	/**
 	 * 게시글 등록
 	 * */
 	public static int insertBoard(Board board) throws SQLException {
-		return 0;
+		return boardDao.insertBoard(board);
 	}
 	
 	/**
 	 * 게시글 수정
 	 * */
 	public static int updateBoard(Board board) throws SQLException {
-		return 0;
+		return boardDao.updateBoard(board);
 	}
 	
 	/**
 	 * 게시글 삭제
 	 * */
 	public static int deleteBoard(int boardNum) throws SQLException {
-		return 0;
+		return boardDao.deleteBoard(boardNum);
 	}
 	
 
@@ -63,6 +63,6 @@ public class BoardService {
 	 * 조회수 업데이트
 	 * */
 	public static int updateClickCount(int boardNum) throws SQLException {
-		return 0;
+		return boardDao.updateClickCount(boardNum);
 	}
 }

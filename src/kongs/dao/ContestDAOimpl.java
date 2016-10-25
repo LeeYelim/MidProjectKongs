@@ -140,7 +140,6 @@ public class ContestDAOimpl implements ContestDAO {
 		int result = 0;
 		
 		try {
-			
 			con = DBUtil.getConnection();
 			ps = con.prepareStatement("delete from contest where contestnum=?");
 			ps.setInt(1, Integer.parseInt(contestNum));
