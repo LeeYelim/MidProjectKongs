@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>::콩스</title>
 	<link rel="stylesheet" type="text/css" href="css/indexCss.css">
+	<link rel="stylesheet" type="text/css" href="css/defaultCss.css">
 </head>
 <body>
 	<div id="mainMenu">
