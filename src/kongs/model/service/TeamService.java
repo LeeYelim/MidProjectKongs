@@ -11,6 +11,7 @@ public class TeamService {
 	
 	private static TeamBoardImpl dao = new TeamBoardImpl();
 	
+	
 	/**
 	 * ÆÀ ¼ö ±¸ÇÏ±â
 	 * select distinct count(teamid) from member;
