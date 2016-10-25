@@ -1,11 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-
 	<title>::콩스</title>
+	<!-- 매 페이지 마다 defaultCss는 꼭 입력 -->
+	<link rel="stylesheet" type="text/css" href="css/defaultCss.css">
 	<link rel="stylesheet" type="text/css" href="css/indexCss.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -13,25 +15,40 @@
 	<div id="mainMenu">
 		<div class="container">
 			<div id="logo">
-				<a href="main.jsp"><img src="img/logo.png"></a>
+				<a href="#"><img src="img/logo.png"></a>
 			</div>
-			<ul>
+			<ul id="menu">				
 				<li><a href="contest.jsp">공모전 정보</a></li>
 				<li><a href="#">게시판</a></li>
 				<li><a href="#">팀 게시판</a></li>
-				<li><a href="map.jsp">스터디룸</a></li>
+				<li><a href="#">스터디룸</a></li>
 				<c:choose>
-				<c:when test="${empty sessionScope.user}"><li id="loginView"><a>Login</a></li></c:when>
-				<c:when test="${sessionScope.user!=null}"><li id="logoutView"><a>Logout</a></li></c:when>
+					<c:when test="${empty sessionScope.user}"><li id="loginView"><a>Login</a></li></c:when>
+					<c:when test="${sessionScope.user!=null}"><li id="logoutView"><a>Logout</a></li></c:when>
 				</c:choose>
 			</ul>
+			<div id="trangle-up"></div>
+			<div id="profileView">
+				<div id="profileImage">
+					<img alt="유저 프로필 사진" src="img/main/team_profile1.jpg">
+					<ul>
+						<li class="profile_id">jhlee1201ashdsajkhasjksahdjk</li>
+						<li class="profile_nick">HwaYak 님 로그인</li>
+					</ul>
+				</div>
+				<div id="profile_btn">
+					<!-- button은 type이 submit임 -->
+					<button>팀 만들기</button>
+					<button>개인정보 수정</button>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="clear"></div>
 	<article id="imgBanner">
 		<ul>
 			<li>
-				<img src="img/banner1.jpg" alt="">
+				<img src="img/main/banner1.jpg" alt="">
 				<div class="container">
 					<div class="bleft">
 						공모전으로 우리들의 창의력을 발휘하자!<br>
@@ -41,7 +58,7 @@
 				</div>
 			</li>
 			<li>
-				<img src="img/banner2.jpg" alt="">
+				<img src="img/main/banner2.jpg" alt="">
 				<div class="container">
 					<div class="bcenter">
 						함께하면 재미가 두배! 사람과의 인연은 덤으로!<br>
@@ -51,7 +68,7 @@
 				</div>	
 			</li>
 			<li>
-				<img src="img/banner3.jpg" alt="">
+				<img src="img/main/banner3.jpg" alt="">
 				<div class="container">
 					<div class="bright">
 						여기에는 무엇을 채워야 할지 모르겠다!<br>
@@ -77,21 +94,21 @@
 				<span>현재 생성된 공모전수</span><br>
 				<span>${size}</span>
 			</div>
-			<img src="img/stati1.jpg" alt="공모전수">
+			<img src="img/main/stati1.jpg" alt="공모전수">
 		</div>
 		<div class="stati_bg">
 			<div>
 				<span>현재 구성된 팀수</span><br>
 				<span>${teamcount}</span>
 			</div>
-			<img src="img/stati2.jpg" alt="팀수">
+			<img src="img/main/stati2.jpg" alt="팀수">
 		</div>
 		<div class="stati_bg">
 			<div>
 				<span>가입한 회원수</span><br>
-				<span>${membercount}</span>
+				<span>250000명</span>
 			</div>
-			<img src="img/stati3.jpg" alt="회원수">
+			<img src="img/main/stati3.jpg" alt="회원수">
 		</div>
 	</div>
 	<div class="clear"></div>
@@ -110,7 +127,7 @@
 					<div class="photo-image">
 						<div class="photo-img">
 							<a href="#"></a>
-							<img src="img/${contest.photoName}.jpg">
+							<img src="img/main/${contest.photoName}.jpg">
 						</div>
 					<h4>${contest.title}</h4>
 					</div>
@@ -131,7 +148,7 @@
 				<!-- 팀 소개-->
 				<div id="team_img_view">
 					<div class="team_content">
-						<img src="img/team_profile1.jpg">
+						<img src="img/main/team_profile1.jpg">
 						<p class="competition_name">
 							웹 프로젝트
 						</p>
@@ -146,7 +163,7 @@
 						</p>
 					</div>
 					<div class="team_content">
-						<img src="img/team_profile2.jpg">
+						<img src="img/main/team_profile2.jpg">
 						<p class="competition_name">
 							자바 프로젝트
 						</p>
@@ -161,7 +178,7 @@
 						</p>
 					</div> 
 					<div class="team_content">
-						<img src="img/team_profile3.jpg">
+						<img src="img/main/team_profile3.jpg">
 						<p class="competition_name">
 							무언가 프로젝트
 						</p>
@@ -211,6 +228,7 @@
 			<!-- 회원가입 폼-->
             <form action="front?command=signup" method="post" onsubmit="">
             	<input type="text" name="id" placeholder="아이디">
+            	<input type="button" name="id_overlap" value="중복 검사">
 				<input type="password" name="pass" placeholder="비밀번호">
 				<input type="password" name="pass_re" placeholder="비밀번호 재입력">
 				<input type="text" name="name" placeholder="이름">
