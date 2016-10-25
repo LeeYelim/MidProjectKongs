@@ -218,6 +218,15 @@ h3.main_title span {
 
 #profile_btn a:hover {
 	background: #0a617c;
+=======
+	bottom: 0px;
+}
+
+#profile_btn button{
+	width: 50%;
+	float: left;
+	height: 20%;
+>>>>>>> origin/master
 }
 
 /*
