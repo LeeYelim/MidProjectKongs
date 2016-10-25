@@ -24,11 +24,18 @@ $(function(){
 		}
 	});
 
+	// 로그인 버튼 클릭
 	$("#loginView").click(function(){
 		loginForm.fadeIn(visibleDuration);
 		signUpForm.fadeOut(0);
 		$("#loginPlace").fadeIn(visibleDuration);
-	})
+	});
+	
+	// 로그아웃 버튼 클릭
+	$("#logoutView").click(function(){
+		alert('로그아웃합니다.');
+		location.href="logout.jsp";
+	});
 });
 
 function showSignUpView(){

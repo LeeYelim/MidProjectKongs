@@ -31,6 +31,9 @@ public class MainLoadAction implements Action {
 			List<Contest> list  = ContestService.selectTopClickCount();
 			request.setAttribute("list", list);
 			
+			
+			
+			
 			url="/main.jsp";
 		} catch(SQLException e) {
 			e.printStackTrace();

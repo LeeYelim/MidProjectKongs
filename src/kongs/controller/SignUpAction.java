@@ -32,7 +32,8 @@ public class SignUpAction implements Action {
 			} else {	// 회원가입에 성공
 				// 가입 정보로 로그인 상태 유지
 				// 메인페이지로 이동(로그인상태로) => loginAction으로 보내주기
-				url="";
+				request.getSession().setAttribute("user", member);
+				url="/index.jsp";
 			}
 			
 		} catch(Exception e) {

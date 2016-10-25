@@ -20,7 +20,7 @@ public class SelectContestAction implements Action {
 		try{
 		 List<Contest> list = ContestService.selectAll();
 		 request.setAttribute("list", list);
-		 url="/index.html";
+		 url="/index.jsp";
 		 
 		}catch(SQLException e){
 			e.printStackTrace();

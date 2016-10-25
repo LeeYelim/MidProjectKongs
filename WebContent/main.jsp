@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +20,10 @@
 				<li><a href="#">게시판</a></li>
 				<li><a href="#">팀 게시판</a></li>
 				<li><a href="#">스터디룸</a></li>
-				<li id="loginView"><a>Login</a></li>
+				<c:choose>
+				<c:when test="${empty sessionScope.user}"><li id="loginView"><a>Login</a></li></c:when>
+				<c:when test="${sessionScope.user!=null}"><li id="logoutView"><a>Logout</a></li></c:when>
+				</c:choose>
 			</ul>
 		</div>
 	</div>
