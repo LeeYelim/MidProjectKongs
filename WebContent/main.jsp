@@ -19,7 +19,7 @@
 				<li><a href="contest.jsp">공모전 정보</a></li>
 				<li><a href="#">게시판</a></li>
 				<li><a href="#">팀 게시판</a></li>
-				<li><a href="map.html">스터디룸</a></li>
+				<li><a href="map.jsp">스터디룸</a></li>
 				<c:choose>
 				<c:when test="${empty sessionScope.user}"><li id="loginView"><a>Login</a></li></c:when>
 				<c:when test="${sessionScope.user!=null}"><li id="logoutView"><a>Logout</a></li></c:when>
