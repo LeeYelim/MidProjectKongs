@@ -20,7 +20,7 @@
 				<li><a href="#">공모전 정보</a></li>
 				<li><a href="#">게시판</a></li>
 				<li><a href="#">팀 게시판</a></li>
-				<li><a href="#">스터디룸</a></li>
+				<li><a href="map.html">스터디룸</a></li>
 				<li id="loginView"><a>Login</a></li>
 			</ul>
 		</div>
