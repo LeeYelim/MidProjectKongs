@@ -30,7 +30,7 @@ public class ContestService {
 	 * 공모전 정보 게시판의 게시글 등록
 	 */
 	public static int insert(Contest contest) throws SQLException {
-		return 0;
+		return contestDao.insert(contest);
 	}
 	
 	
@@ -39,7 +39,7 @@ public class ContestService {
 	 * 공모전 정보 게시판의 게시글 수정
 	 */
 	public static int update(Contest contest) throws SQLException {
-		return 0;
+		return contestDao.update(contest);
 	}
 	
 	
@@ -48,7 +48,7 @@ public class ContestService {
 	 * 공모전 정보 게시판의 게시글 삭제
 	 */
 	public static int delete(String contestNum) throws SQLException {
-		return 0;
+		return contestDao.delete(contestNum);
 	}
 	
 }

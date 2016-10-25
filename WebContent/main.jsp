@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/defaultCss.css">
 	<link rel="stylesheet" type="text/css" href="css/indexCss.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
 	<div id="mainMenu">
@@ -107,7 +108,7 @@
 		<div class="stati_bg">
 			<div>
 				<span>가입한 회원수</span><br>
-				<span>250000명</span>
+				<span>${membercount}</span>
 			</div>
 			<img src="img/main/stati3.jpg" alt="회원수">
 		</div>

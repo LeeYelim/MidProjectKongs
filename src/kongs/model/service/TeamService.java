@@ -24,34 +24,34 @@ public class TeamService {
 	 * 팀의 존재 여부 확인
 	 */
 	public static int searchTeam(String id) throws SQLException {
-		return 0;
+		return dao.searchTeam(id);
 	}
 	
 	/**
 	 * 전체 레코드 검색
 	 */
 	public static List<TeamBoard> selectAll(String teamId) throws SQLException {
-		return null;
+		return dao.selectAll(teamId);
 	}
 
 	/**
 	 * 레코드 삽입
 	 */
 	public static int insert(TeamBoard teamBoard) throws SQLException {
-		return 0;
+		return dao.insert(teamBoard);
 	}
 	
 	/**
 	 * 해당 레코드 삭제
 	 */
 	public static int delete(String boardNum, String teamId) throws SQLException {
-		return 0;
+		return dao.delete(boardNum, teamId);
 	}
 	
 	/**
 	 * 해당 레코드 수정
 	 */
 	public static int update(TeamBoard teamBoard) throws SQLException {
-		return 0;
+		return dao.update(teamBoard);
 	}
 }
