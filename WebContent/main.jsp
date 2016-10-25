@@ -20,7 +20,6 @@
 				<li><a href="#">게시판</a></li>
 				<li><a href="#">팀 게시판</a></li>
 				<li><a href="map.html">스터디룸</a></li>
-				<li id="loginView"><a>Login</a></li>
 				<c:choose>
 				<c:when test="${empty sessionScope.user}"><li id="loginView"><a>Login</a></li></c:when>
 				<c:when test="${sessionScope.user!=null}"><li id="logoutView"><a>Logout</a></li></c:when>
@@ -90,7 +89,7 @@
 		<div class="stati_bg">
 			<div>
 				<span>가입한 회원수</span><br>
-				<span>250000명</span>
+				<span>${membercount}</span>
 			</div>
 			<img src="img/stati3.jpg" alt="회원수">
 		</div>
@@ -222,7 +221,7 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="smoothscroll-for-websites-master/SmoothScroll.js"></script>
+	<script type="text/javascript" src="js/smoothscroll-for-websites-master/SmoothScroll.js"></script>
 	<script type="text/javascript" src="js/mainBanner.js"></script>
 	<script type="text/javascript" src="js/mainStati.js"></script>
 	<script type="text/javascript" src="js/teamBanner.js"></script>

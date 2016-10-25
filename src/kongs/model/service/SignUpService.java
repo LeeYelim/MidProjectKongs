@@ -1,6 +1,7 @@
 package kongs.model.service;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import kongs.dao.SignUpDAO;
 import kongs.dao.SignUpDAOImpl;
@@ -24,6 +25,13 @@ public class SignUpService {
 		return signupDao.SelectById(id).getPwd();
 	}
 	
+	
+	/**
+	 *  전체 회원 정보 불러오기
+	 */
+	public static List<Member> selectAllMember() throws SQLException {
+		return signupDao.selectAllMember();
+	}
 	
 	/**
 	 * 회원조회(ID중복확인)

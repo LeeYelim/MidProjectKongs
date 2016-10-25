@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import kongs.model.dto.Contest;
 import kongs.model.service.ContestService;
+import kongs.model.service.SignUpService;
 import kongs.model.service.TeamService;
 
 public class MainLoadAction implements Action {
@@ -31,6 +32,9 @@ public class MainLoadAction implements Action {
 			List<Contest> list  = ContestService.selectTopClickCount();
 			request.setAttribute("list", list);
 			
+			// È¸¿ø¼ö
+			int membercount = SignUpService.selectAllMember().size();
+			request.setAttribute("membercount", membercount);
 			url="/main.jsp";
 		} catch(SQLException e) {
 			e.printStackTrace();
