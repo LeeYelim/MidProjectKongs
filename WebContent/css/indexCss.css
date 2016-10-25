@@ -181,6 +181,8 @@ h3.main_title span {
 	font-size: 23px;
 	font-weight: bold;
 	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 /*
