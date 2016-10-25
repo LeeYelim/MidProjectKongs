@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>콩스</title>
+	<title>::콩스</title>
 	<link rel="stylesheet" type="text/css" href="css/indexCss.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<body>
 	<div id="mainMenu">
 		<div class="container">
 			<div id="logo">
@@ -18,7 +18,7 @@
 				<li><a href="#">게시판</a></li>
 				<li><a href="#">팀 게시판</a></li>
 				<li><a href="#">스터디룸</a></li>
-				<li><a href="#">Login</a></li>
+				<li id="loginView"><a>Login</a></li>
 			</ul>
 		</div>
 	</div>
@@ -92,43 +92,152 @@
 	<div class="clear"></div>
 	<div id="photo">
 		<div class="container">
-			<h3 class="material-icons">
+			<h3 class="material-icons main_title">
 				<div class="title_line"></div>
-				<span>Competition</span>
+				<a href="#">
+					<span>Competition</span>
+				</a>
 			</h3>
+			<!-- 공모전-->
 			<div class="photo-view">
 				<div class="photo-image">
 					<div class="photo-img">
+						<a href="#"></a>
 						<img src="img/photo1.jpg">
 					</div>
-					<h4>제목1asdfasdfasdfasdf</h4>
+					<h4>공모전 제목1</h4>
 				</div>
 				<div class="photo-image">
 					<div class="photo-img">
+						<a href="#"></a>
 						<img src="img/photo2.jpg">
 					</div>
-					<h4>제목</h4>
+					<h4>공모전 제목2</h4>
 				</div>
 				<div class="photo-image">
 					<div class="photo-img">
+						<a href="#"></a>
 						<img src="img/photo3.jpg">
 					</div>
-					<h4>제목</h4>
+					<h4>공모전 제목3</h4>
 				</div>
 				<div class="photo-image">
 					<div class="photo-img">
+						<a href=""></a>
 						<img src="img/photo4.jpg">
 					</div>
-					<h4>제목</h4>
+					<p><h4>공모전 제목4</h4></p>
+					<p><span></span></p>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div id="team">
+		<div id="team-view">
+			<div class="container">
+				<h3 class="material-icons main_title">
+					<div class="title_line"></div>
+					<a href="#">
+						<span>Team</span>
+					</a>
+				</h3>
+				<!-- 팀 소개-->
+				<div id="team_img_view">
+					<div class="team_content">
+						<img src="img/team_profile1.jpg">
+						<p class="competition_name">
+							웹 프로젝트
+						</p>
+						<p class="team_name">
+							엄청나게 좋은 팀
+						</p>
+						<p class="team_info">
+							으으이으이ㅢ읭 ㅣ의의으이 ㅢ의의으 ㅣ의의으이ㅡ ㅣ의의 ㅡ이ㅡ이잉 ㅢ으이읭 
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+						</p>
+					</div>
+					<div class="team_content">
+						<img src="img/team_profile2.jpg">
+						<p class="competition_name">
+							자바 프로젝트
+						</p>
+						<p class="team_name">
+							좋은 팀
+						</p>
+						<p class="team_info">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+						</p>
+					</div> 
+					<div class="team_content">
+						<img src="img/team_profile3.jpg">
+						<p class="competition_name">
+							무언가 프로젝트
+						</p>
+						<p class="team_name">
+							팀 팀
+						</p>
+						<p class="team_info">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+						</p>
+					</div> 
+				</div>
+				<div id="team_np_btn_box">
+					<button id="teamLeft">&lt;</button>
+					<button id="teamRight">&gt;</button>
+				</div>
+				<h3 class="material-icons main_title">
+					<div class="title_line"></div>
+					<a href="#">
+						<span>moveing</span>
+					</a>
+				</h3>
+			</div>
+		</div>
+	</div>
+	<div id="loginPlace">
+		<div class="login_box" id="loginForm">
+			<div class="loginTitleBar">
+				<span>로그인</span>
+				<input type="button" name="cancle" value="X">
+			</div>
+			<!-- 로그인 폼-->
+			<form action="" method="post" onsubmit="">
+				<input type="text" name="id" placeholder="ID">
+				<input type="password" name="pass" placeholder="PW">
+				<input type="submit" name="login" value="LOGIN">
+				<input type="button" name="sign" value="SIGN UP">
+			</form>
+		</div>
+		<div class="login_box" id="signUpForm">
+			<div class="loginTitleBar">
+				<span>회원가입</span>
+				<input type="button" name="cancle" value="X">
+			</div>
+			<!-- 회원가입 폼-->
+            <form action="" method="post" onsubmit="">
+            	<input type="text" name="id" placeholder="아이디">
+				<input type="password" name="pass" placeholder="비밀번호">
+				<input type="password" name="pass_re" placeholder="비밀번호 재입력">
+				<input type="text" name="name" placeholder="이름">
+				<input type="text" name="nick" placeholder="닉네임">
+                <input type="submit" name="sign" value="회원가입">
+                <input type="button" name="login" value="로그인 화면으로">
+            </form>
 		</div>
 	</div>
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="smoothscroll-for-websites-master/SmoothScroll.js"></script>
 	<script type="text/javascript" src="js/mainBanner.js"></script>
 	<script type="text/javascript" src="js/mainStati.js"></script>
-	<script type="text/javascript" src="js/photoImage.js"></script>
+	<script type="text/javascript" src="js/teamBanner.js"></script>
+	<script type="text/javascript" src="js/loginPlace.js"></script>
 </body>
-
 </html>
