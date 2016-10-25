@@ -8,7 +8,7 @@
 <script type="text/javascript">
 	$(function loadmain() {
 		<%
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("front");
 		%>
 	})
 	

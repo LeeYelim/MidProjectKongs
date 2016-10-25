@@ -23,7 +23,6 @@ public class ContestDAOimpl implements ContestDAO {
 		ResultSet rs = null;
 		
 		List<Contest> list = new ArrayList<>();
-		
 		try {
 			
 			con  = DBUtil.getConnection();

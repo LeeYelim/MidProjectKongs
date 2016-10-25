@@ -22,7 +22,6 @@ public class MainLoadAction implements Action {
 		 int size = list.size();
 		 request.setAttribute("size", size);
 		 url="/main.jsp";
-		 System.out.println(size);
 		}catch(SQLException e){
 			e.printStackTrace();
 			request.setAttribute("errorMsg", e.getMessage());
