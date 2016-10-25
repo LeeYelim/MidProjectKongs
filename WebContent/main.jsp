@@ -13,10 +13,10 @@
 	<div id="mainMenu">
 		<div class="container">
 			<div id="logo">
-				<a href="#"><img src="img/logo.png"></a>
+				<a href="main.jsp"><img src="img/logo.png"></a>
 			</div>
 			<ul>
-				<li><a href="#">공모전 정보</a></li>
+				<li><a href="contest.jsp">공모전 정보</a></li>
 				<li><a href="#">게시판</a></li>
 				<li><a href="#">팀 게시판</a></li>
 				<li><a href="map.html">스터디룸</a></li>

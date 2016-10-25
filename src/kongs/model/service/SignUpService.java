@@ -2,7 +2,6 @@ package kongs.model.service;
 
 import java.sql.SQLException;
 import java.util.List;
-
 import kongs.dao.SignUpDAO;
 import kongs.dao.SignUpDAOImpl;
 import kongs.model.dto.Member;
