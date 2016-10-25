@@ -194,7 +194,7 @@
 				<input type="button" name="cancle" value="X">
 			</div>
 			<!-- 로그인 폼-->
-			<form action="" method="post" onsubmit="">
+			<form action="front?command=login" method="post" onsubmit="">
 				<input type="text" name="id" placeholder="ID">
 				<input type="password" name="pass" placeholder="PW">
 				<input type="submit" name="login" value="LOGIN">
@@ -207,7 +207,7 @@
 				<input type="button" name="cancle" value="X">
 			</div>
 			<!-- 회원가입 폼-->
-            <form action="" method="post" onsubmit="">
+            <form action="front?command=signup" method="post" onsubmit="">
             	<input type="text" name="id" placeholder="아이디">
 				<input type="password" name="pass" placeholder="비밀번호">
 				<input type="password" name="pass_re" placeholder="비밀번호 재입력">

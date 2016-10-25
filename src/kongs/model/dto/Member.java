@@ -1,18 +1,26 @@
 package kongs.model.dto;
 
 public class Member {
+	
 	private String id;
 	private String pwd;
 	private String name;
 	private String nick; // 닉네임
+	private String teamId; // 팀이름
 	
 	public Member(){}
 	public Member(String id, String pwd, String name, String nick) {
-		super();
 		this.id = id;
 		this.pwd = pwd;
 		this.name = name;
 		this.nick = nick;
+	}
+	public Member(String id, String pwd, String name, String nick, String teamId) {
+		this.id = id;
+		this.pwd = pwd;
+		this.name = name;
+		this.nick = nick;
+		this.teamId = teamId;
 	}
 	public String getId() {
 		return id;
@@ -37,5 +45,11 @@ public class Member {
 	}
 	public void setNick(String nick) {
 		this.nick = nick;
+	}
+	public String getTeamId() {
+		return teamId;
+	}
+	public void setTeamId(String teamId) {
+		this.teamId = teamId;
 	}
 }
