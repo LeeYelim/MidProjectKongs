@@ -18,7 +18,7 @@
 				<a href="index.jsp"><img src="img/logo.png"></a>
 			</div>
 			<ul id="menu">				
-				<li><a href="contest.jsp">공모전 정보</a></li>
+				<li><a href="front?command=contest">공모전 정보</a></li>
 				<li><a href="#">게시판</a></li>
 				<li><a href="#">팀 게시판</a></li>
 				<li><a href="map.jsp">스터디룸</a></li>
@@ -129,7 +129,7 @@
 					<div class="photo-image">
 						<div class="photo-img">
 							<a href="#"></a>
-							<img src="img/main/${contest.photoName}.jpg">
+							<img src="img/contestImg/${contest.photoName}">
 						</div>
 					<h4>${contest.title}</h4>
 					</div>

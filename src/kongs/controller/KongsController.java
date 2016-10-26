@@ -26,6 +26,7 @@ public class KongsController extends HttpServlet {
 		//parameter로 넘어오는 command 값 받기
 		String key = request.getParameter("command");//encType있을경우 null
 		if(key==null) key="main";
+		System.out.println("key : " + key);
 		Action action = map.get(key);
 		action.execute(request, response);
 	}

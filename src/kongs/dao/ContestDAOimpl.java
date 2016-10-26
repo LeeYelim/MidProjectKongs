@@ -42,7 +42,7 @@ public class ContestDAOimpl implements ContestDAO {
 
 	
 	/**
-	 * Contest에 있는 레코드 중 조회수가 높은 4개만 추출
+	 * Contest에 있는 레코드 중 조회수가 높은 8개만 추출
 	 * */
 	@Override
 	public List<Contest> selectTopClickCount() throws SQLException {
@@ -53,7 +53,7 @@ public class ContestDAOimpl implements ContestDAO {
 		
 		try {
 			con = DBUtil.getConnection();
-			ps = con.prepareStatement("select * from contest where rownum<=4 order by clickcount");
+			ps = con.prepareStatement("select * from contest where rownum<=8 order by clickcount");
 			rs = ps.executeQuery();
 			while(rs.next()) {
 				list.add(new Contest(rs.getInt("contestnum"), rs.getString("title"), 
