@@ -21,18 +21,11 @@
 				<li><a href="contest.jsp">공모전 정보</a></li>
 				<li><a href="#">게시판</a></li>
 				<li><a href="#">팀 게시판</a></li>
-<<<<<<< HEAD
-				<li><a href="#">스터디룸</a></li>
+				<li><a href="map.jsp">스터디룸</a></li>
 				<c:choose>
  					<c:when test="${empty sessionScope.user}"><li id="loginView"><a>Login</a></li></c:when>
  					<c:when test="${sessionScope.user!=null}"><li id="logoutView"><a>Logout</a></li></c:when>
- 				</c:choose>  
-=======
-				<li><a href="map.jsp">스터디룸</a></li>
-				<li id="loginView">
-					<a>Login</a>
-				</li>
->>>>>>> origin/master
+ 				</c:choose>
 			</ul>
 			<div id="profile">
 				<div id="trangle-up"></div>
