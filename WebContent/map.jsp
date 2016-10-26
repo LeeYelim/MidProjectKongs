@@ -9,7 +9,8 @@
 </style>
 
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/indexCss.css">
+ 	<link rel="stylesheet" type="text/css" href="css/defaultCss.css">
+	<link rel="stylesheet" type="text/css" href="css/indexCss.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=0420f8faff992e976974551ab41996c0&libraries=services"></script>
 	<script>
@@ -137,18 +138,40 @@
 			<div id="logo">
 				<a href="#"><img src="img/logo.png"></a>
 			</div>
-			<ul>
+			<ul id="menu">				
 				<li><a href="#">공모전 정보</a></li>
 				<li><a href="#">게시판</a></li>
 				<li><a href="#">팀 게시판</a></li>
-				<li><a href="map.html">스터디룸</a></li>
-				<c:choose>
-				<c:when test="${empty sessionScope.user}"><li id="loginView"><a>Login</a></li></c:when>
-				<c:when test="${sessionScope.user!=null}"><li id="logoutView"><a>Logout</a></li></c:when>
-				</c:choose>
+				<li><a href="map.jsp">스터디룸</a></li>
+				<li id="loginView">
+					<a>Login</a>
+				</li>
 			</ul>
+			<div id="profile">
+				<div id="trangle-up"></div>
+				<div id="profileView">
+					<div id="profileImage">
+						<img alt="유저 프로필 사진" src="img/main/team_profile1.jpg">
+						<ul>
+							<li class="profile_id">jhlee1201ashdsajkhasjksahdjk</li>
+							<li class="profile_nick">HwaYak 님 로그인</li>
+						</ul>
+					</div>
+					<div id="profile_btn">
+						<a href="">팀 만들기</a>
+						<a href="">팀 게시판 이동</a>
+						<a href="">개인정보 수정</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 <div id="map" style="width:600px;height:600px;"></div>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/smoothscroll-for-websites-master/SmoothScroll.js"></script>
+	<script type="text/javascript" src="js/mainBanner.js"></script>
+	<script type="text/javascript" src="js/mainStati.js"></script>
+	<script type="text/javascript" src="js/teamBanner.js"></script>
+	<script type="text/javascript" src="js/loginPlace.js"></script>
 </body>
 </html>
