@@ -51,4 +51,12 @@ public class ContestService {
 		return contestDao.delete(contestNum);
 	}
 	
+	
+	/**
+	 * D-day 
+	 */
+	public static List<Contest> dday() throws SQLException{
+		return contestDao.dday();
+	}
+	
 }

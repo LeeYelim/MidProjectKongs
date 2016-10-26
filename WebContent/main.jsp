@@ -18,7 +18,7 @@
 				<a href="index.jsp"><img src="img/logo.png"></a>
 			</div>
 			<ul id="menu">				
-				<li><a href="contest.jsp">공모전 정보</a></li>
+				<li><a href="Competition.jsp">공모전 정보</a></li>
 				<li><a href="#">게시판</a></li>
 				<li><a href="#">팀 게시판</a></li>
 				<li><a href="map.jsp">스터디룸</a></li>

@@ -37,4 +37,8 @@ public interface ContestDAO {
 	 */
 	int delete(String contestNum) throws SQLException;
 	
+	/**
+	 * D-day 
+	 */
+	public List<Contest> dday() throws SQLException;
 }

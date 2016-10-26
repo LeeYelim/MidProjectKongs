@@ -151,6 +151,32 @@ public class ContestDAOimpl implements ContestDAO {
 		
 		return result;
 	}
+	
+	/**
+	 * D-day 
+	 */
+	public List<Contest> dday() throws SQLException{
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		List<Contest> list = new ArrayList<>();
+		
+		String sql = "select endday, startday, CONTESTNUM from contest where startday<sysdate and endday>sysdate";
+		
+		try{
+			con = DBUtil.getConnection();
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while(rs.next()){
+				list.add(new Contest(rs.getInt("CONTESTNUM"),rs.getString("startday"),rs.getString("endday")));
+			}
+		}finally{
+			DBUtil.dbClose(con, ps, rs);
+		}
+		
+		return list;
+		
+	}
 }
 
 

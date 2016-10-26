@@ -98,3 +98,14 @@ increment by 1;
 
 update contest set photoname='photo1' where contestnum=1;
 update contest set photoname='photo2' where contestnum=2;
+
+insert into contest values('공모1','sponser1',to_date('10/26/16','MM/DD//YY'),to_date('16/12/01','YY/MM/DD'),'Desert.jpg',0,'design',sysdate,seq_contestBorad.nextval);
+insert into contest values('공모2','sponser2',to_date('10/22/16','MM/DD//YY'),to_date('16/01/01','YY/MM/DD'),'Hydrangeas.jpg',0,'advertisement',sysdate,seq_contestBorad.nextval);
+insert into contest values('공모3','sponser3',to_date('11/02/16','MM/DD//YY'),to_date('16/03/01','YY/MM/DD'),'Lighthouse.jpg',0,'it',sysdate,seq_contestBorad.nextval);
+insert into contest values('공모4','sponser4',to_date('11/05/16','MM/DD//YY'),to_date('16/12/01','YY/MM/DD'),'Penguins.jpg',0,'media',sysdate,seq_contestBorad.nextval);
+insert into contest values('공모5','sponser5',to_date('10/27/16','MM/DD//YY'),to_date('16/12/16','YY/MM/DD'),'Tulips.jpg',0,'idea',sysdate,seq_contestBorad.nextval);
+insert into contest values('공모6','sponser6',to_date('11/17/16','MM/DD//YY'),to_date('16/12/22','YY/MM/DD'),'border.png',0,'design',sysdate,seq_contestBorad.nextval);
+insert into contest values('공모7','sponser7',to_date('09/09/16','MM/DD//YY'),to_date('16/10/29','YY/MM/DD'),'naver.gif',0,'advertisement',sysdate,seq_contestBorad.nextval);
+insert into contest values('공모8','sponser8',to_date('10/13/16','MM/DD//YY'),to_date('16/11/01','YY/MM/DD'),'test.jpeg',0,'idea',sysdate,seq_contestBorad.nextval);
+
+select endday, startday, CONTESTNUM from contest where startday<sysdate and endday>sysdate;

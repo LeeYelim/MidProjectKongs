@@ -12,6 +12,15 @@ public class Contest {
 	private String photoName; // »çÁø¸í
 	
 	public Contest(){}
+	
+	public Contest(int num, String startDate, String endDate ) {
+		super();
+		this.num = num;
+		this.startDate = startDate;
+		this.endDate = endDate;
+	}
+	
+	
 	public Contest(int num, String title, String sponser, String category, String startDate, String endDate,
 			int clickCount, String regDate, String photoName) {
 		super();
@@ -25,6 +34,7 @@ public class Contest {
 		this.regDate = regDate;
 		this.photoName = photoName;
 	}
+
 
 	public int getNum() {
 		return num;
