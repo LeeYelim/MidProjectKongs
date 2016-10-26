@@ -3,7 +3,13 @@ var signUpForm = $("#signUpForm");
 var loginDuration = 500;
 var visibleDuration = 350;
 
-$(function(){
+$( function(){
+	
+	// hover시 프로필 정보 보여주기
+	$("#logoutView").mouseover(function(){
+		$("#profile").attr("display", "initial");
+	});
+	
 	$("#loginPlace input[type=button]").click(function(){
 		var btnTmp = $(this).get(0).name;
 
@@ -36,6 +42,8 @@ $(function(){
 		alert('로그아웃합니다.');
 		location.href="logout.jsp";
 	});
+	
+	$("")
 });
 
 function showSignUpView(){

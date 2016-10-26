@@ -152,6 +152,7 @@ h3.main_title span {
 	position: relative;
 	height: 100%;
 	width: 100%;
+	display: none;
 }
 
 #profileView {
