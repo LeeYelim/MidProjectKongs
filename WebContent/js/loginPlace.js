@@ -7,7 +7,12 @@ $( function(){
 	
 	// hover시 프로필 정보 보여주기
 	$("#logoutView").mouseover(function(){
-		$("#profile").attr("display", "initial");
+		$("#profile").css("display", "initial");
+		$("#profile").slidedown();
+	});
+	
+	$("#logoutView").mouseout(function(){
+		$("#profile").css("display", "none");
 	});
 	
 	$("#loginPlace input[type=button]").click(function(){

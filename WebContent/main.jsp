@@ -25,7 +25,7 @@
 				<c:choose>
  					<c:when test="${empty sessionScope.user}"><li id="loginView"><a>Login</a></li></c:when>
  					<c:when test="${sessionScope.user!=null}"><li id="logoutView"><a>Logout</a></li></c:when>
- 				</c:choose>
+ 				</c:choose>  
 			</ul>
 			<div id="profile">
 				<div id="trangle-up"></div>
